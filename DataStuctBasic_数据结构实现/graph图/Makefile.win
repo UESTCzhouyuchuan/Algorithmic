@@ -1,0 +1,40 @@
+# Project: ÏîÄ¿1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = mymap.o main.o Kruskal.o Dijkstra.o Floyd.o
+LINKOBJ  = mymap.o main.o Kruskal.o Dijkstra.o Floyd.o
+LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -g3
+INCS     = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = Í¼ÂÛ.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+mymap.o: mymap.cpp
+	$(CPP) -c mymap.cpp -o mymap.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Kruskal.o: Kruskal.cpp
+	$(CPP) -c Kruskal.cpp -o Kruskal.o $(CXXFLAGS)
+
+Dijkstra.o: Dijkstra.cpp
+	$(CPP) -c Dijkstra.cpp -o Dijkstra.o $(CXXFLAGS)
+
+Floyd.o: Floyd.cpp
+	$(CPP) -c Floyd.cpp -o Floyd.o $(CXXFLAGS)

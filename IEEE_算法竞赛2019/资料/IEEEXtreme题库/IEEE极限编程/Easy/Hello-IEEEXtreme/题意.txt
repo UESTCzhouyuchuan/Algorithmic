@@ -1,0 +1,25 @@
+Hello-IEEEXtreme
+
+##Description
+给你一个字符串，让你重新排序，使得出现helloieeextreme字符串的次数最多。
+
+##Input
+第一行一个T
+然后接下来T行，每一行一个字符串
+ 
+##Output
+输出T行，输出最多的出线次数
+
+##Sample Input
+2
+helloiextreeextremehelhelloieloieeextremeeemeieeext
+ieeehremelloxtllo
+
+##Sample Output
+3
+0
+
+
+##Hint
+In the first case,wo can get string like:"helloieeextremehelloieeextremehelloieeextremeieeext".
+The string "helloieeextreme" appears three times.

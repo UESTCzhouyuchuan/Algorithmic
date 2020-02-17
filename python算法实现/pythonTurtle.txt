@@ -1,0 +1,12 @@
+turtle 函数库
+from turtle import*/import turtle
+
+turtle.setup(window_heigth,window_width,setup_x,setup_y);
+turtle.pensize(line_width);
+trutle.pencolor("color or rgb() or #xxxxx")
+turtle.seth(number): express line direction,number: degree
+turtle.circle(rad,angle)rad:radius半径 正左负右angle:行进的弧度值
+turtle.fd()|forward(distance):向前爬行距离类似的:bk()|backward()|back()
+
+
+

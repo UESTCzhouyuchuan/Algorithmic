@@ -1,0 +1,58 @@
+# Project: treeÊ÷
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o CreateTree.o DestroyBTree.o FindNode.o BTHeight.o DispBTree.o PreOrder.o InOrder.o PostOrder.o AllPath.o CreateBT.o
+LINKOBJ  = main.o CreateTree.o DestroyBTree.o FindNode.o BTHeight.o DispBTree.o PreOrder.o InOrder.o PostOrder.o AllPath.o CreateBT.o
+LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -g3
+INCS     = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = treeÊ÷.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+CreateTree.o: CreateTree.cpp
+	$(CPP) -c CreateTree.cpp -o CreateTree.o $(CXXFLAGS)
+
+DestroyBTree.o: DestroyBTree.cpp
+	$(CPP) -c DestroyBTree.cpp -o DestroyBTree.o $(CXXFLAGS)
+
+FindNode.o: FindNode.cpp
+	$(CPP) -c FindNode.cpp -o FindNode.o $(CXXFLAGS)
+
+BTHeight.o: BTHeight.cpp
+	$(CPP) -c BTHeight.cpp -o BTHeight.o $(CXXFLAGS)
+
+DispBTree.o: DispBTree.cpp
+	$(CPP) -c DispBTree.cpp -o DispBTree.o $(CXXFLAGS)
+
+PreOrder.o: PreOrder.cpp
+	$(CPP) -c PreOrder.cpp -o PreOrder.o $(CXXFLAGS)
+
+InOrder.o: InOrder.cpp
+	$(CPP) -c InOrder.cpp -o InOrder.o $(CXXFLAGS)
+
+PostOrder.o: PostOrder.cpp
+	$(CPP) -c PostOrder.cpp -o PostOrder.o $(CXXFLAGS)
+
+AllPath.o: AllPath.cpp
+	$(CPP) -c AllPath.cpp -o AllPath.o $(CXXFLAGS)
+
+CreateBT.o: CreateBT.cpp
+	$(CPP) -c CreateBT.cpp -o CreateBT.o $(CXXFLAGS)

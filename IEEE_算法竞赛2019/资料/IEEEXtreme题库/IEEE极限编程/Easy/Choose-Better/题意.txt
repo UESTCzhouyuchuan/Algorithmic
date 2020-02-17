@@ -1,0 +1,28 @@
+Choose Better
+
+##Description
+有n个人，每个人有三个属性，你需要在每个属性都选出一个代表出来
+
+使得最后代表加起来的分数最高。
+
+输出这个分数。
+
+##Input
+第一行一个T
+一个n>=3,<=1e6
+三行 1-1e9
+ 
+##Output
+输出T行，分数
+
+##Sample Input
+1
+3
+1 2 3
+2 1 3
+3 1 2
+
+##Sample Output
+8
+
+##Hint

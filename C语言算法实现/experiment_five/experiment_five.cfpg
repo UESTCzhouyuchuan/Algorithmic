@@ -1,0 +1,9 @@
+<Projects version="2.0">
+	<Project active="1">experiment_five.cfp</Project>
+	<File active="1">experiment_five.c</File>
+	<File active="0">find_part.c</File>
+	<File active="0">find_part.h</File>
+	<File active="0">..\code2\experiment5.h</File>
+	<File active="0">read_file.h</File>
+	<File active="0">read_file.c</File>
+</Projects>

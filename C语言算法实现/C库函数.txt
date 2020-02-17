@@ -1,0 +1,37 @@
+1  函数声明 math.h
+double frexp(double x,int*exponent) 返回值是介于0.5到1的数（x=0特殊）
+x=return*2^(exponent)
+
+2 double modf(double x,int *integer)  返回值x的小数部分
+x=return+integer；
+
+3 void *memcpy(void *dest,const void*src,size_t n);
+头文件string.h,#include<cstring>(c++)
+从源src所指的内存地址的起始位置开始拷贝n个字节到
+目标dest所指的内存地址的起始位置中,
+注意：source和destin都不一定是数组，任意的可读写的空间均可。
+类似于strcpy，可以复制src中第m个字符，复制n个
+memcpy（dest，src+m-1，n）
+复制后覆盖原有部分数据，
+char* s="GoldenGlobalView";
+char d[20];
+memcpy(d,s,(strlen(s)+1));//strlen(s)+1,为了给d把空字符也复制过去
+4 int feof() 函数原型 int feof(FILE *stream);
+feof是C语言标准库函数，其原型在stdio.h中，其功能是检测流上的文件结束符
+如果文件结束，则返回非0值，否则返回0，int c;
+c = fgetc(fp);
+while(!feof(fp))
+{
+    printf("%X\n", c);
+    c = fgetc(fp);}
+//最后一个c的值为-1，但是无妨，因为其他所有的循环操作都要
+放在此句话上面
+feof()可以用EOF代替吗？不可以。fgetc返回-1时，有两种情况：读到文件结尾或是读取错误。
+因此我们无法确信文件已经结束, 因为可能是读取错误! 这时我们需要feof()。
+5 size_t fread ( void *buffer, size_t size, size_t count, FILE *stream) ;
+fread是一个函数，它从文件流中读数据，最多读取count个项，每个项size个字节，如果调
+用成功返回实际读取到的项个数（小于或等于count），如果不成功或读到文件末尾返回 0。
+6memcpy指的是c和c++使用的内存拷贝函数，memcpy函数的功能是从源src所指的内存地址的起始位置开始拷贝n个字节到目标dest所指的内存地址的起始位置中。
+void *memcpy(void *dest, const void *src, size_t n);
+
+
